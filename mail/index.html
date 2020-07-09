@@ -1,0 +1,69 @@
+<?php
+
+<!-- session_start();
+
+require 'vendor/autoload.php';
+include 'Mail.Send.Class.php';
+require 'load.php';
+if (!isset($_SESSION['user_email'])) {
+    header("Location: https://projects.bit-academy.nl/~stam/login/index.php");   
+}
+if ($_SESSION['access_level'] !== 'none') {
+
+?> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>S.T.A.M.</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="output.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
+    <link href="output.css" rel="stylesheet">
+</head>
+<body class="text-white flex h-screen w-screen justify-center stam-gradient" style="font-family:'IBM Plex Mono', monospace; background-color:#7D8597;">
+    <img class="background-image"src="media/time-lapse-photo-of-stars-on-night-924824.jpg">
+    <form method="POST" class="my-5">
+        <div class="grid grid-cols-6 gap-1 p-5 box-color rounded-md">
+            <input id="search_data" autocomplete="off" class="p-2 my-3 col-span-6 bit-font input-color" name="email" type="text" placeholder="Email adres (seperate with ',')" required>
+            <div id="auto_fill" class='autofill flex flex-wrap col-span-5 overflow-hidden z-10'></div>
+            <select name="shuttle" pla>
+                <option value="3">shuttle 3</option>
+            </select>
+            <input class="p-4 my-3 col-span-4 bit-font input-color" name="subject" type="subject" placeholder="Onderwerp" required> 
+            <div class="col-span-1 text-white flex items-center p-1 gap-4 text-2xl">
+                    <label for="includeReminder">Include Reminder: </label>
+                    <input type="checkbox" name="includeReminder" checked>
+            </div>
+            <button class="col-span-1 cursor-pointer text-2xl rounded-md button-submit shimmer" type="submit" name="sendemail" >send mail</button>
+            <textarea class="border-2 p-2 my-1 col-span-6 input-color bit-font" name="msg" placeholder="text field" rows="4" required></textarea>
+                
+            
+        </div>
+        <div id="icsCreator" class="grid grid-cols-2 gap-1 p-5">
+            <div class="flex items-baseline rounded-md justify-between p-5 box-color">
+                <label class="underline" for="setDate">Datum: </label>
+                <input class="border-2 text-2xl p-2 bit-font input-color" type="date"name="setDate">
+            </div>
+            <div class="flex items-baseline rounded-md justify-between p-5 box-color">
+                <label class="underline" for="repeat">Herhaal wekelijks tot: </label>
+                <input class="border-2 text-2xl p-2 bit-font input-color" type="date" name="repeat">
+            </div>
+            <div class="flex items-baseline rounded-md justify-between p-5 box-color">
+                <label class="underline" for="setStartTime">start Tijd (12:00:AM/PM): </label>
+                <input class="border-2 text-2xl p-2 bit-font input-color" type="time" name="setStartTime">
+            </div>
+            <div class="flex items-baseline rounded-md justify-between p-5 box-color">
+                <label class="underline" for="setEndTime">eind Tijd (12:00:AM/PM): </label>
+                <input class="border-2 text-2xl p-2 bit-font input-color" type="time" name="setEndTime">
+            </div>
+        </div>
+    </form>
+    
+<script src="js_functions.js"></script>
+</body>
+</html>
+<!-- <?php
+}
+else {
+    echo "<script> alert('access denied'); </script>";
+} -->

@@ -1,0 +1,110 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.background-image {
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.stam-gradient {
+    background-color: #e0e1dd;
+}
+
+@-webkit-keyframes backgroundGradient {
+    0%{background-position:90% 0%}
+    50%{background-position:11% 100%}
+    100%{background-position:90% 0%}
+}
+@keyframes backgroundGradient {
+    0%{background-position:90% 0%}
+    50%{background-position:11% 100%}
+    100%{background-position:90% 0%}
+}
+.bit-font {
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+}
+.button-submit {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #a56336;
+    padding: 0 15px;
+    border: 2px solid black;
+    transition: color 1s;
+    color: black;
+    transition: color 1s ease, background-color 1s, border 1s ease;
+    cursor: pointer;
+}
+.button-submit:hover {
+    border: 2px solid white;
+    color:white;
+    background-color:#33658a;
+}
+.box-color {
+    background-color:#815839;
+    color: white;
+}
+.input-color {
+    background-color: #143642;
+    color: white;
+    border:2px solid black;
+}
+.input-color:hover {
+    background-color: #143642;
+    color: white;
+    border:2px solid white;
+}
+.input-color:focus {
+    background-color: #143642;
+    color: white;
+    border:2px solid white;
+}
+.input-option {
+    background-color: #a56336;
+    padding: 10px 15px;
+    margin: 5px;
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.5s ease, border-bottom 0.5s ease, color 0.4s ease;
+}
+.input-option:hover {
+    background-color: #33658a;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.autofill {
+    max-height: 80px;
+    max-width: 500px;
+}
+.shuttle-select {
+    background-color: #a56336;
+}
+
+.shuttle-select:focus {
+    background-color: #33658a;
+}
+.shuttle-option {
+    background-color:#a56336;
+}
+.shuttle-option:active {
+    background-color:#33658a;
+}
+.land-mark {
+    padding: 5px 15px;
+    background-color: #a56336;
+    border: 1px solid black;
+    transition: background-color 1s ease, border 1s ease;
+}
+#cal_icon {
+    color: white;
+    transition: color 0.8s ease;
+    cursor: pointer;
+}
+#cal_icon:hover {
+    color: black;
+}
